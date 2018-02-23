@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>UBC CPEN400A - Assignment 5</title>
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/popup.js" type="text/javascript"></script>
+	<script src="js/modal.js" type="text/javascript"></script>
+	<script src="js/cartVerification.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<div id="header">
+		<div>
+			<img id="logo" src="images/ubcLogo.gif"/>
+		</div>
+		<div>
+			<img id="welcomeBanner" src="images/welcomeImage.png"/>
+		</div>
+	</div>
+	<div id="mainContent">
+		<div>
+			<ul id="navigationMenu">
+				<li class="filter allitems">All Items</li>
+				<li class="filter books">Books</li>
+				<li class="filter clothing">Clothing</li>
+				<li class="filter tech">Tech</li>
+				<li class="filter gifts">Gifts</li>
+				<li class="filter stationery">Stationery</li>
+				<li class="filter supplies">Supplies</li>
+			</ul>
+
+			<div id="modal">
+				<div>
+				    <div id="close">&times;</div>
+				    <div id="table-container">
+					    <table id="myTable"></table>
+					</div>
+				</div>
+			</div>
+
+  		</div>
+
+		<div>
+			<ul id="productList"></ul>
+		</div>
+	</div>
+
+	<div id="cartText">
+		<button id="cartButton">Cart ($0)</button>
+	</div>
+
+	<div id="footer">
+		<div>
+			<p><b>Electrical and Computer Engineering</b></p>
+			<p>2332 Main Mall</p>
+			<p>Vancouver, BC, V6T 1Z4, Canada</p>
+			<p>Tel +1.604.822.2872</p>
+			<p>Fax +1.604.822.5949</p>
+			<p>Email info@ece.ubc.ca</p>
+		</div>
+		<div id="timer">
+			You've been inactive for 0 seconds.
+		</div>
+	</div>
+
+	<script src="js/cart.js" type="text/javascript"></script>
+	<script src="js/ajax.js" type="text/javascript"></script>	
+	<script src="js/categoryFilters.js" type="text/javascript"></script>				
+	
+</body>
+</html>

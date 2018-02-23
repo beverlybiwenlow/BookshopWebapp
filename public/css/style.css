@@ -1,0 +1,233 @@
+body {
+	padding:0;
+	margin: 0;
+}
+#header {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: row;
+	background: #7491a3;
+}
+#header>div:nth-child(1){
+	width: 250px;
+	padding: 10px;
+}
+#header>div:nth-child(2){
+	width: 750px;
+	padding: 10px;
+	text-align: right;
+}
+#welcomeBanner {
+	vertical-align: middle;
+}
+#mainContent {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: row;
+}
+#mainContent>div:nth-child(1){
+	width: 250px;
+	/* background: #dae7ef; */
+}
+#mainContent>div:nth-child(2){
+	width: 750px;
+	padding: 10px;
+}
+#navigationMenu {
+	list-style-type: none;
+	margin: 12px;
+	padding: 0;
+	font-weight: 600;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+#navigationMenu>li {
+	background: #bbd7e8;
+	border-bottom: 1px solid #7491a3;
+	padding: 10px;
+	cursor: pointer;
+}
+#navigationMenu>li:last-child {
+	border-bottom: none;
+}
+#navigationMenu>li:hover {
+	background: #7491a3;
+	color: #fff;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+	transition: 0.25s;
+}
+#footer {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #7491a3;
+	color: #fff;
+}
+#footer>div {
+	padding: 10px;
+}
+#footer>div>p,
+#footer>div>b {
+	margin: 0;
+	text-align: right;
+	font-size: 10pt;
+}
+#productList {
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+.product {
+	display: block;
+	width: 25%;
+	cursor: pointer;
+}
+.product>div {
+	margin: 8px;
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+.product:hover>div {
+	background: rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.product>div>div {
+	text-align: center;
+	position: relative;
+}
+.product>div>div:nth-child(1) {
+	height: 164px;
+	overflow: hidden;
+}
+.product>div>div:nth-child(2) {
+	margin-bottom: 8px;
+}
+.product>div>div>img{
+	width: 100%;
+	border-radius: 5px;
+}
+.product>div>div>span{
+	position: absolute;
+	visibility: hidden;
+	display: block;
+	width: 100%;
+	top: 120px;
+	height:10%;
+	padding: 3px;
+	font-weight: 600;
+	background: rgba(255, 155, 0, 0.75);
+}
+.product:hover>div>div>span{
+	visibility: visible;
+}
+
+#cart{
+	position: absolute;
+	visibility: hidden;
+	display: block;
+	width: 80%;
+	left: 20px;
+	bottom: 40px;
+	padding: 4px;
+	/*background-color: rgba(211,211,211,0.5);*/
+}
+
+#close {
+    color: #7491a3;
+    float: right;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#close:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.product:hover #cart{
+	visibility: visible;
+}
+
+.addButton{
+	position: absolute;
+	visibility: hidden;
+	display: block;
+	width: 40%;
+	left: 5px;
+	bottom: 80px;
+	padding: 4px;
+	background-color: green;
+	color: white;
+}
+
+.removeButton{
+	position: absolute;
+	visibility: hidden;
+	display: block;
+	width: 40%;
+	right: 5px;
+	bottom: 80px;
+	padding: 4px;
+	background-color: red;
+	color: white;
+}
+
+.product:hover button{
+	visibility: visible;
+}
+
+#cartText {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+}
+
+#modal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; /* 100% doesn't cover the screen when minimized*/
+    height: 1000px; /* 100% doesn't cover the footer*/
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+#modal>div {
+	position: relative;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 3px solid #888;
+    width: 35%;
+    height: 20%;
+    overflow-y: scroll;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+#close {
+    color: #aaa;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#close:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
